@@ -1,15 +1,48 @@
 .App {
-  text-align: center;
-  /* background-color: black; */
-}
-
-.App-header {
-  background-color: #61dafb;
-  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  background-color: rgb(41, 39, 39);
+  height: 100vh;
+}
+
+.Header {
+  position: absolute;
+  top: 0;
+  background-color: rgb(77, 167, 202);
+  height: 10vh;
+  width: 100vw;
+}
+
+.Home {
+  position: absolute;
+  left: 50px;
+}
+
+.WhiteBox {
+  text-align: left;
+  background-color: white;
+  height: 400px;
+  width: 80vw;
+}
+
+.Counter {
+  display: inline-block;
+  position: absolute;
+  right: 15vw;
+}
+
+.PersonName {
+  display: inline-block;
+  text-decoration: underline solid rgb(77, 167, 202);
+}
+
+.Buttons {
   color: white;
+  background-color: rgb(77, 167, 202);
+  border-radius: 20px;
 }

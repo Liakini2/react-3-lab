@@ -10,45 +10,49 @@ class App extends Component{
     super()
     this.state={
       data: data,
-      value: 1
-    }
+      value: 0,
+    }  
   }
-
-  DisplayPerson=()=>{
-    let data = this.state.data
-    console.log('This function is firing')
-    if(data.id===this.state.value){
-      this.setState({
-        data: data.indexOf(data.id)
-      }) 
-    }
-  }
-
+  
   NextButton=()=>{
-    const value = this.state.value
-    this.setState({
-      value: value + 1
-    })
-    this.DisplayPerson()
-}  
-
+    let value = this.state.value+1
+    if(value<25){
+      this.setState({
+        value: value
+      })
+    } else {
+      this.setState({
+        value: value-1
+      })
+    }
+  }  
+  
   PreviousButton=()=>{
-    const value = this.state.value
-    this.setState({
-      value: value -1
-    })
-    this.DisplayPerson()
+    let value = this.state.value-1
+    if(value>-1){
+      this.setState({
+        value: value
+      })
+    } else {
+      this.setState({
+        value: value+1
+      })
+    }
   }
 
   render(){
+    console.log(this.state.name)
     return (
       <div className="App">
-        <Header/>
-        {JSON.stringify(this.state.data)}
-        <WhiteBox 
-        // data={this.state.data}
-        />
+        <div className="Header">
+        <Header />
+        </div>
+        <div className="WhiteBox">
+        <WhiteBox data={this.state.data[this.state.value]}/>
+        </div>
+        <div>
         <Buttons NextButton={this.NextButton} PreviousButton={this.PreviousButton}/>
+        </div>
       </div>
     );
   }

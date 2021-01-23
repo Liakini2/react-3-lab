@@ -1,11 +1,7 @@
-import React, {Component} from 'react'
-
-class Header extends Component{
-    render(){
-        return(
-            <h1>Home</h1>
-        )
-    }
+const Header=()=>{
+    return(
+        <h4 className="Home">Home</h4>
+    )
 }
 
 export default Header
