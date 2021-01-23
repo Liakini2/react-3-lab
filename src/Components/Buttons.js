@@ -4,8 +4,14 @@ class Buttons extends Component{
     render(){
         return(
             <div>
-                <button>Previous</button>
-                <button>Next</button>
+                <button
+                onClick={this.props.NextButton}>
+                    Previous
+                </button>
+                <button
+                onClick={this.props.PreviousButton}>
+                    Next
+                </button>
             </div>
         )
     }
